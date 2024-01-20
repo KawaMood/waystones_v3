@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [" E ", "ALA", "PPP"],
+    "key": {
+        "E": {
+            "item": "minecraft:ender_eye"
+        },
+        "A": {
+            "item": "minecraft:amethyst_shard"
+        },
+        "L": {
+            "item": "minecraft:lodestone"
+        },
+        "P": {
+            "item": "minecraft:nether_bricks"
+        }
+    },
+    "result": {
+        "item": "minecraft:knowledge_book"
+    }
+}

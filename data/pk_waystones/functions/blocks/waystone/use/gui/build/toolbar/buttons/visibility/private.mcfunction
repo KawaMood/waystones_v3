@@ -1,0 +1,3 @@
+#> pk_waystones:blocks/waystone/use/gui/build/toolbar/buttons/visibility/private
+
+data modify storage pk:common temp.gui.items append value {Slot:21b,id:"minecraft:leather_helmet",Count:1b,tag:{Trim:{material:"minecraft:copper",pattern:"minecraft:sentry"},display:{Name:'[{"text":"Visibility: ","italic":false},{"text":"Private","color":"red","italic":false}]',Lore:['{"text":"Click to change to \\"Public\\"","color":"gray","italic":false}'],color:13200001},HideFlags:255,pk_data:{gui:1b,from:"waystones",trigger:"visibility/change",trigger_params:{visibility:"public"}}}}

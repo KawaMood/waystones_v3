@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "pk_waystones:waystone/deepslate"
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:events/player/crafted/waystone/variant/deepslate"
+    }
+}

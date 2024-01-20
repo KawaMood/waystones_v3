@@ -1,0 +1,26 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+        "type": "minecraft:score",
+        "target": "this",
+        "score": "pk.waystones.group.id"
+    },
+    "range": {
+        "min": {
+            "type": "minecraft:score",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "$temp"
+            },
+            "score": "pk.waystones.group.id"
+        },
+        "max": {
+            "type": "minecraft:score",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "$temp"
+            },
+            "score": "pk.waystones.group.id"
+        }
+    }
+}

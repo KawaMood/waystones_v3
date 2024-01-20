@@ -1,0 +1,5 @@
+#> pk_waystones:settings/default_visibility/get
+
+execute if score $pk.waystones.settings.default_visibility pk.temp matches 0 run tellraw @s [{"text":"Setting \"","color":"gray"},{"text":"Default Visibility","color":"yellow"},{"text":"\" is currently set to ","color":"gray"},{"text":"Discover","color":"yellow"}]
+execute if score $pk.waystones.settings.default_visibility pk.temp matches 1 run tellraw @s [{"text":"Setting \"","color":"gray"},{"text":"Default Visibility","color":"yellow"},{"text":"\" is currently set to ","color":"gray"},{"text":"Private","color":"yellow"}]
+execute if score $pk.waystones.settings.default_visibility pk.temp matches 2 run tellraw @s [{"text":"Setting \"","color":"gray"},{"text":"Default Visibility","color":"yellow"},{"text":"\" is currently set to ","color":"gray"},{"text":"Public","color":"yellow"}]

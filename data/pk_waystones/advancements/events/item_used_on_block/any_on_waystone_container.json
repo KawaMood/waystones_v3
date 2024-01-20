@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "nbt": "{Items:[{tag:{pk_data:{gui:1b,custom_block:1b,id:\"waystone\",from:\"waystones\",in_use:0b}}}]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:events/player/item_used_on_block/any_on_waystone_container"
+    }
+}
