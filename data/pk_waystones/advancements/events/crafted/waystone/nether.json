@@ -1,9 +1,9 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:recipe_unlocked",
+            "trigger": "minecraft:recipe_crafted",
             "conditions": {
-                "recipe": "pk_waystones:waystone/nether"
+                "recipe_id": "pk_waystones:waystone/nether"
             }
         }
     },

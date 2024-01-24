@@ -11,7 +11,6 @@ function pk_waystones:blocks/waystone/use/gui/triggers/protected/check_permissio
 execute if score $trigger.stop pk.temp matches 1 run return 0
 
 # Update data
-data modify storage pk:common backup set from storage pk:common temp.gui.clicked_item
 data modify storage pk:common temp.used_waystone.protected set from storage pk:common temp.gui.clicked_item.tag.pk_data.trigger_params.protected
 function pk_waystones:blocks/waystone/use/data/used_waystone/update
 
