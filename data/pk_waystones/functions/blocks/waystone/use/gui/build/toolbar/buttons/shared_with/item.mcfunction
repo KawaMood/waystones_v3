@@ -1,3 +1,3 @@
 #> pk_waystones:blocks/waystone/use/gui/build/toolbar/buttons/shared_with/item
 
-data modify storage pk:common temp.gui.items append value {Slot:23b,id:"minecraft:writable_book",Count:1b,tag:{display:{Name:'[{"text":"Shared List","italic":false}]',Lore:['{"text":"Click to get the Writable Book","color":"gray","italic":false}']},HideFlags:255,pk_data:{gui:1b,from:"waystones",trigger:"shared_with/taken",in_accepted_item_slot:1b}}}
+data modify storage pk:common temp.gui.items append value {Slot:23b,id:"minecraft:writable_book",Count:1b,tag:{display:{Name:'[{"text":"Shared List","italic":false}]',Lore:['{"text":"Click to get the Writable Book","color":"gray","italic":false}']},HideFlags:255,CustomModelData:16110068,pk_data:{gui:1b,from:"waystones",trigger:"shared_with/taken",in_accepted_item_slot:1b}}}
