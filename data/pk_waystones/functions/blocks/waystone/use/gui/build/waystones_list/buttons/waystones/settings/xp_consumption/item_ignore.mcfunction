@@ -1,5 +1,5 @@
 #> pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/settings/xp_consumption/item_ignore
-# @context any at the waystone container location (aligned xyz)
+# @context user at the waystone container location (aligned xyz)
 # Storage:
 #   pk:common temp.gui.item: the current button item in creation to append to the waystone list
 

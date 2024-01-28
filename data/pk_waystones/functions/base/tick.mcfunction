@@ -6,7 +6,6 @@
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 # Store the current gametime
 execute store result score $gametime pk.value run time query gametime
-
 # Allow players to change their own waystones-related settings
 scoreboard players enable @a pk.waystones.hide_coordinates
 
@@ -27,3 +26,5 @@ execute as @e[type=marker,tag=pk.waystones.waystone.controller] at @s run functi
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 # Player mined barrel
 scoreboard players set @a[scores={pk.waystones.mined.barrel=1..}] pk.waystones.mined.barrel 0
+# Player is in fight
+scoreboard players remove @a[scores={pk.waystones.in_fight=1..}] pk.waystones.in_fight 1

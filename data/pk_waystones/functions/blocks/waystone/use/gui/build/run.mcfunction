@@ -1,5 +1,5 @@
 #> pk_waystones:blocks/waystone/use/gui/build/run
-# @context any at the waystone container location (aligned xyz)
+# @context user at the waystone container location (aligned xyz)
 # @requires
 #   storage pk:common temp.used_waystone: the current used waystone data
 

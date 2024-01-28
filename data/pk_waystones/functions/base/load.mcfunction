@@ -37,6 +37,7 @@ scoreboard objectives add pk.crafted.knowledge_book crafted:knowledge_book
 # - Tracking players actions:
 scoreboard objectives add pk.waystones.mined.barrel mined:barrel
 scoreboard objectives add pk.waystones.leave_game custom:leave_game
+scoreboard objectives add pk.waystones.in_fight dummy
 # - Used for Waystones functioning:
 scoreboard objectives add pk.waystones.page dummy
 scoreboard objectives add pk.waystones.animations.timer dummy
@@ -60,7 +61,7 @@ function pk_waystones:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 1.. run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 2.. run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:

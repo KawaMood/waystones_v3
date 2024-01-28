@@ -1,12 +1,9 @@
-# **Waystones V.3.0.1**
+# **Waystones V.3.1.0**
 
 **Avoid unnecessary long journeys!**
 
 Craft and place Waystones on your points of interest.  
 A survival-friendly and multiplayer-friendly way to quickly travel in your world!
-
-**This version is currently on Beta.**  
-It may contains minor issues, and the data pack doesn't have an automatic uninstalling process yet.
 
 # ⚠️ Important - If you were using V.2
 
@@ -14,13 +11,13 @@ It may contains minor issues, and the data pack doesn't have an automatic uninst
 >
 > If you want to upgrade to V.3, you will first need to remove all waystones of your world, uninstall V.2, then install Waystones V.3 and unfortunately, ask your players to place their waystones back.
 >
-> I wish I could add a way to port these version, but the way owner were managed until here didn't allow me to do so. V.3 introduces new standards and the flexible and maintainable structure I wanted it to have. Now every entities links are stored in a database (storage), and there is a way to track all waystones to update in live. So there would be no problem for the future.
+> I wish I could add a way to port these versions, but the way owners were managed until here didn't allow me to do so. V.3 introduces new standards and the flexible and maintainable structure I wanted it to have. Now every entities links are stored in a database (storage), and there is a way to track all waystones to update in live. So there would be no problem for the future.
 
 # 🪄Introduction
 
 ## What is Waystones?
 
-Waystones is a data pack inspired by BlayTheNinth's famous Waystones mod.
+Waystones is a data pack inspired by [BlayTheNinth's famous Waystones mod](https://www.curseforge.com/minecraft/mc-mods/waystones).
 Waystones allow you to travel quickly from one point to another in your world, and within any dimension (including custom ones). Unlike the mod, waystones do not appear naturally within the world, they require to be crafted.
 
 ## How to craft and use a waystone?
@@ -34,7 +31,7 @@ Waystones can be crafted using:
 
 Base blocks to use depend on the desired look. You can use **Polished Andesite**, **Cut Sandstones**, **Deepslate Bricks**, or **Nether Bricks**. The recipe is the following:
 
-![waystones recipes](https://mc.kawamood.com/datapacks/PK_Waystones/medias/recipe_waystone.gif)
+![waystones recipes](https://cdn.modrinth.com/data/cached_images/e8682e04d02eb1ea39c552c50737a7b6481aac6c.gif)
 
 Before placing your waystone, it is recommended to rename it within an **Anvil**. This will allow you to retrieve your points correspondance more easily within the waystones list.
 Waystones icons in the list depends on the block they have been placed on, so you can also chose identifiable ones. These icons also handle NBT (meaning you can place a waystone on a custom player head to have custom icons).
@@ -49,9 +46,11 @@ I recommend you to watch the featured video for better explanations and examples
 
 In the toolbar of the waystones GUI, you can see three buttons in the middle. If you're a waystone manager or the owner of the current waystone, these buttons will allow you to edit their attributes. Other players won't of course be able to edit its attributes.
 
-![waystone gui](https://cdn.modrinth.com/data/cached_images/8e717981bfe2c18d5152d4dfe1794de607493237.jpeg)
+Other buttons may appear on the bottom-left and bottom-right corners if you have placed many waystones in your world. They are the pagination buttons.
 
-You can discover bellow the influence of each attributes:
+![waystone gui](https://cdn.modrinth.com/data/cached_images/72f81dd3a15b06e2730298b66dce4004636aeb06.jpeg)
+
+You can discover bellow the influence of each attributes.
 
 ## Visibility
 
@@ -98,9 +97,10 @@ Example - Granting the manager role to the player named "Bob"
 /tag Bob add pk.waystones.manager
 ```
 
-# ⚙️Settings
+# ⚙️Settings & Permissions
 
-## XP Consumption
+<details>
+<summary>XP Consumption</summary>
 
 If enabled, players will need to consume levels to travel from waystone to waystone. The cost is calculated according to the distance between the used and target waystones. The setting can be enabled using the following command:
 
@@ -134,7 +134,9 @@ If needed, you can also be informed of the current amount of blocks per level an
 /function pk_waystones:settings/xp_consumption/get
 ```
 
-## Blacklisted Dimensions
+</details>
+<details>
+<summary>Blacklisted Dimensions</summary>
 
 This setting lets you manage **dimensions** from the **blacklist**. The blacklist handles vanilla dimensions, but it also works with custom dimensions from data packs or [Multiverse](https://dev.bukkit.org/projects/multiverse-core) worlds.  
 In a blacklisted dimension, only managers will be able to place waystones, regular players will not be able to.
@@ -154,18 +156,9 @@ Example - Disallow waystones placement in the Nether
 
 📜 Note: in order to see the dimension id you're currently in, you can open the [debug screen (F3)](https://minecraft.wiki/w/Debug_screen), the dimension id is shown bellow the coordinates on the left side.
 
-## Show Waystones From Same Dimension Only
-
-If enabled, this setting restricts players to only see waystones being in the same dimension as themselves from a waystone's GUI. It can be useful if you don't want players to be able to teleport between different [Multiverse](https://dev.bukkit.org/projects/multiverse-core) worlds.
-You can **enable**, **disable** or **get** the current state of the setting using these following commands respectively:
-
-```
-/function pk_waystones:settings/show_same_dimension_only/true
-/function pk_waystones:settings/show_same_dimension_only/false
-/function pk_waystones:settings/show_same_dimension_only/get
-```
-
-## Display Waystones Nameplates
+</details>
+<details>
+<summary>Display Waystones Nameplates</summary>
 
 If enabled, floating nameplates will appear above waystones, allowing you to identify them more easily. You can **enable**, **disable** or **get** the current state of the setting using these following commands respectively:
 
@@ -175,13 +168,12 @@ If enabled, floating nameplates will appear above waystones, allowing you to ide
 /function pk_waystones:settings/display_nameplates/get
 ```
 
-<details>
-<summary>See render in game</summary>
-  
-  ![display nameplates](https://cdn.modrinth.com/data/cached_images/62d1f3bda0c3bc53160355a13827f14e29ec31a5.jpeg)
-</details>
+Render of nameplates in game:  
+![display nameplates](https://cdn.modrinth.com/data/cached_images/62d1f3bda0c3bc53160355a13827f14e29ec31a5.jpeg)
 
-## Ignore Monsters Nearby
+</details>
+<details>
+<summary>Ignore Monsters Nearby</summary>
 
 If enabled, it **ignores** monsters being around the waystones. If disabled, it prevents players to use a waystone if there are monsters nearby. It is the same principle as the beds use-prevention system. Note that this setting is **enabled** by default (monsters are ignored).
 You can **enable**, **disable** or **get** the current state of the setting using these following commands respectively:
@@ -192,7 +184,9 @@ You can **enable**, **disable** or **get** the current state of the setting usin
 /function pk_waystones:settings/ignore_monsters/get
 ```
 
-## Legacy Textures
+</details>
+<details>
+<summary>Legacy Textures</summary>
 
 If enabled, the data pack will use regular **blocks textures** for waystones instead of the custom ones.
 It can be useful if you're using high-resolution resources packs. You can **enable**, **disable** or **get** the current state of the setting using these following commands respectively:
@@ -203,13 +197,12 @@ It can be useful if you're using high-resolution resources packs. You can **enab
 /function pk_waystones:settings/display_nameplates/get
 ```
 
-<details>
-<summary>See render in game</summary>
-  
-  ![legacy textures](https://cdn.modrinth.com/data/cached_images/048e648a435ebf225ce36d2fb7c4f5db24530456.jpeg)
-</details>
+Render of textures in game:  
+![legacy textures](https://cdn.modrinth.com/data/cached_images/048e648a435ebf225ce36d2fb7c4f5db24530456.jpeg)
 
-## Default visibility
+</details>
+<details>
+<summary>Default visibility</summary>
 
 This setting lets you change the default visibility of a waystone on placement.
 Initially, the default visibility mode is "discoverable". You can set another visibility using the following command, where visibility can be either "discoverable", "private" or "public":
@@ -230,27 +223,9 @@ If needed, you can also be informed of the current default visibility using the 
 /pk_waystones:settings/default_visibility/get
 ```
 
-## Allow Visibility/Protection Change
-
-These multiple settings allow you to restrict players from changing their waystones specific attributes. Note that managers are immune to this effect and will always be able to change any attributes from any waystone. By default, players are allowed to edit all attributes of their waystones.
-
-In order to **allow**, **disallow** players to change their waystones **visibility**, or if you want to **get** the current state of this permission, you can use the following commands respectively:
-
-```
-/function pk_waystones:settings/allow_visibility_change/true
-/function pk_waystones:settings/allow_visibility_change/false
-/function pk_waystones:settings/allow_visibility_change/get
-```
-
-In order to **allow**, **disallow** players to change their waystones **protection**, or if you want to **get** the current state of this permission, you can use the following commands respectively:
-
-```
-/function pk_waystones:settings/allow_protection_change/true
-/function pk_waystones:settings/allow_protection_change/false
-/function pk_waystones:settings/allow_protection_change/get
-```
-
-## Limit Waystones Per Player/Server
+</details>
+<details>
+<summary>Limit Waystones Per Player/Server</summary>
 
 You can chose how many waystones **players** can own at most. This amount is relative to each player, meaning if you set it to 5, every players will be able to place 5 waystones each. It can be done using the following command, where "**count**" waits for the desired amount of waystones:
 
@@ -286,6 +261,104 @@ Additionnally, you can also limit the amount of waystone your **server** can con
 
 You can also combine both settings if you want to set a limit per player but also a global limit on the server.
 
+</details>
+<details>
+<summary>Permission: Change "Visibility" Attribute</summary>
+
+These permissions allows you to restrict players from using specific visibility values. Note that managers are immune to this effect and will always be able to change any attributes from any waystone. By default, players are allowed to set any visibility to their waystone.
+
+In order to **allow**, **disallow** players to set the **public visibility** on their waystones, or if you want to **get** the current state of this permission, you can use the following commands respectively:
+
+```
+/function pk_waystones:permissions/change/visibility/public/true
+/function pk_waystones:permissions/change/visibility/public/false
+/function pk_waystones:permissions/change/visibility/public/get
+```
+
+Same as above but for the **private visibility**:
+
+```
+/function pk_waystones:permissions/change/visibility/private/true
+/function pk_waystones:permissions/change/visibility/private/false
+/function pk_waystones:permissions/change/visibility/private/get
+```
+
+Same as above again, but for the **discover visibility**:
+
+```
+/function pk_waystones:permissions/change/visibility/private/true
+/function pk_waystones:permissions/change/visibility/private/false
+/function pk_waystones:permissions/change/visibility/private/get
+```
+
+Finally you can also directly toggle or get all visibilily-based permissions at once:
+
+```
+/function pk_waystones:permissions/change/visibility/all/true
+/function pk_waystones:permissions/change/visibility/all/false
+/function pk_waystones:permissions/change/visibility/all/get
+```
+
+</details>
+<details>
+<summary>Permission: Change "Protection" Attribute</summary>
+
+This permission allows you to restrict players from changing the **protection** attribute of their own waystones. Note that managers are immune to this effect and will always be able to change any attributes from any waystone. By default, players are allowed to change the protection of their waystone.
+
+In order to **allow**, **disallow** players to change their waystones **protection** attribute, or if you want to **get** the current state of this permission, you can use the following commands respectively:
+
+```
+/function pk_waystones:permissions/change/protection/true
+/function pk_waystones:permissions/change/protection/false
+/function pk_waystones:permissions/change/protection/get
+```
+
+</details>
+<details>
+<summary>Permission: Change "Shared With" Attribute</summary>
+
+This permission allows you to restrict players from changing the **shared with** attribute of their own waystones. Note that managers are immune to this effect and will always be able to change any attributes from any waystone. By default, players are allowed to change the "shared with" list of their waystones.
+
+In order to **allow**, **disallow** players to change their waystones **shared with** attribute, or if you want to **get** the current state of this permission, you can use the following commands respectively:
+
+```
+/function pk_waystones:permissions/change/shared_with/true
+/function pk_waystones:permissions/change/shared_with/false
+/function pk_waystones:permissions/change/shared_with/get
+```
+
+</details>
+<details>
+<summary>Permission: Tp In Other Dimensions</summary>
+
+If disabled, this permission force players to only see waystones being in the same dimension as themselves from a waystone's GUI. It can be useful if you don't want players to be able to teleport between different [Multiverse](https://dev.bukkit.org/projects/multiverse-core) worlds.
+This permission is enabled by default, meaning players can teleport in any dimensions.
+
+You can **enable**, **disable** or **get** the current state of the permission using these following commands respectively:
+
+```
+/function pk_waystones:permissions/tp/in_other_dimensions/true
+/function pk_waystones:permissions/tp/in_other_dimensions/false
+/function pk_waystones:permissions/tp/in_other_dimensions/get
+```
+
+</details>
+<details>
+<summary>Permission: Tp In Fight</summary>
+
+If disabled, this permission prevents players to teleport if they took a damage from a living entity (as source) in the last 15 seconds. It can be useful if you don't want players to escape a fight by using a waystone on PvP servers.
+This permission is enabled by default, meaning players can teleport at any moment.
+
+You can **enable**, **disable** or **get** the current state of the permission using these following commands respectively:
+
+```
+/function pk_waystones:permissions/tp/in_fight/true
+/function pk_waystones:permissions/tp/in_fight/false
+/function pk_waystones:permissions/tp/in_fight/get
+```
+
+</details>
+
 # 🧰 Other Commands
 
 The data pack also provides some handy commands. Some of them are usable by both operators and regular players.
@@ -312,12 +385,34 @@ Using these following commands, if the value is set on **1**, waystones' locatio
 /trigger pk.waystones.hide_coordinates set 0
 ```
 
+# 💄 Optional Resources Pack
+
+In order to embellish your experience, a **resources pack** providing models for Waystones items and GUI has been made by our graphist-artist contributor, **Lordphiphi**. You can download it from here: [Waystones Resources Pack V.2.3 (for Waystones V.3) - by Lordphiphi](https://mc.kawamood.com/resourcespacks/Waystones_Resources_Pack_V.2.3_for_Waystones_V.3.zip).
+
+# 🧹 Uninstall
+
+Waystones comes with an automatic uninstallation process. Running it will:
+
+-   Remove all waystones that have been placed in your world, in every dimensions
+-   Remove all scores and storage specific to the Waystones data pack
+-   If there is no more KawaMood data packs installed, also remove all common scores and storages
+
+The uninstalling process may take some seconds to complete. Be sure to wait for the message telling you that you can safely remove the data pack from your world's folder before doing it.
+
+The command to start the uninstalling process is the following one:
+
+```
+/function pk_waystones:base/uninstall/start
+```
+
 # ❓ F.A.Q
 
 <details>
 <summary>Do I need to install a resources pack?</summary>
 
-No, this data pack doesn't involve any resources pack.
+No, this data pack doesn't strictly require a resources pack. It provides a rather-intuitive GUI by itself, and use players heads to render custom textures.
+
+However, a **resources pack** providing models for Waystones items and a better GUI has been made by our graphist-artist contributor, **Lordphiphi**. You can download it from here: [Waystones Resources Pack V.2.3 (for Waystones V.3) - by Lordphiphi](https://mc.kawamood.com/resourcespacks/Waystones_Resources_Pack_V.2.3_for_Waystones_V.3.zip).
 
 </details>
 
@@ -364,4 +459,4 @@ If you want to support its development and the development of other data packs, 
 
 -   [Youtube](https://www.youtube.com/@KawaMood/)
 -   [Planet Minecraft](https://www.planetminecraft.com/member/kawamood/)
--   Or if you're in a generous mood, you can also [buy me a kawa](https://www.buymeacoffee.com/kawamood) (slang term for "coffee")!
+-   Or if you're in a generous mood, I accept donation on [paypal](https://paypal.me/KawaMood) or [buy me a kawa](https://www.buymeacoffee.com/kawamood) (slang term for "coffee")!

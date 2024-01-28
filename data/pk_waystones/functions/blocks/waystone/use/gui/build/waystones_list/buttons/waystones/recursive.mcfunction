@@ -1,5 +1,5 @@
 #> pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/recursive
-# @context any at the waystone container location (aligned xyz)
+# @context user at the waystone container location (aligned xyz)
 # @requires
 #   storage pk:common temp.visible_waystones: a list of all waystones that can be seen by the player
 

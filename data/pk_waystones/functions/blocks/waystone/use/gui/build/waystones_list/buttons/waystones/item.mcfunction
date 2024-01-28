@@ -1,5 +1,5 @@
 #> pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/item
-# @context any at the waystone container location (aligned xyz)
+# @context user at the waystone container location (aligned xyz)
 # Storage:
 #   pk:common temp.visible_waystone: the current visible waystone of the loop
 

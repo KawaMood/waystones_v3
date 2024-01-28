@@ -12,9 +12,9 @@ data modify storage pk:common params.v1 set from storage pk:common temp.used_way
 function pk_waystones:packages/dynamic_command/1_var with storage pk:common params
 execute if entity @s[tag=pk.waystones.manager] run return 1
 
-# Keep all waystones or only waystones from the same dimension
-execute if score $pk.waystones.settings.show_same_dimension_only pk.value matches 1 run function pk_waystones:blocks/waystone/use/data/visible_waystones/filters/same_dimension
-execute if score $pk.waystones.settings.show_same_dimension_only pk.value matches 1 run data modify storage pk:common temp.visible_waystones set from storage pk:common temp.filter.output
+# Keep only waystones from the same dimension if the permission "tp.in_other_dimensions" is disabled
+execute if score $pk.waystones.permissions.tp.in_other_dimensions pk.value matches 0 run function pk_waystones:blocks/waystone/use/data/visible_waystones/filters/same_dimension
+execute if score $pk.waystones.permissions.tp.in_other_dimensions pk.value matches 0 run data modify storage pk:common temp.visible_waystones set from storage pk:common temp.filter.output
 
 # Create another temp array
 data modify storage pk:common temp.array_1 set value []

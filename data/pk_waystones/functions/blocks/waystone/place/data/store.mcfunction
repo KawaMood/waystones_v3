@@ -8,6 +8,8 @@ execute store result storage pk:common temp.waystone.id int 1 run scoreboard pla
 data modify storage pk:common temp.waystone.variant set from storage pk:common temp.item.tag.SkullOwner.Properties.textures[0].Signature
 # Name
 data modify storage pk:common temp.waystone.name set from storage pk:common temp.item.tag.display.Name
+# Protection
+execute if score $pk.waystones.settings.default_protection pk.value matches 1 run data modify storage pk:common temp.waystone.protected set value 1b
 # Visibility
 execute if score $pk.waystones.settings.default_visibility pk.value matches 1 run data modify storage pk:common temp.waystone.visibility set value "private"
 execute if score $pk.waystones.settings.default_visibility pk.value matches 2 run data modify storage pk:common temp.waystone.visibility set value "public"

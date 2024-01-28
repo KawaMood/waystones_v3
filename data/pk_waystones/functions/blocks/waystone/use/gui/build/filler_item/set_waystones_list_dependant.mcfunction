@@ -10,7 +10,7 @@
 $data modify storage pk:common params.slot set value $(slot)
 
 # Set the custom_model_data param
-scoreboard players set $custom_model_data pk.temp 1611006900
+scoreboard players set $custom_model_data pk.temp 11130070
 scoreboard players operation $custom_model_data pk.temp += $gui.page.waystones.amount pk.temp
 execute store result storage pk:common params.custom_model_data int 1 run scoreboard players get $custom_model_data pk.temp
 

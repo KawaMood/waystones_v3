@@ -25,6 +25,10 @@ execute if score $trigger.stop pk.temp matches 1 run return 0
 execute if score $pk.waystones.settings.xp_consumption.blocks pk.value matches 1.. run function pk_waystones:blocks/waystone/use/gui/triggers/tp/settings/xp_consumption/check_if_player_can_tp
 execute if score $trigger.stop pk.temp matches 1 run return 0
 
+# If the permission "tp.in_fight" is enabled, check if the player didn't get hurt recently
+execute if score $pk.waystones.permissions.tp.in_fight pk.value matches 0 if entity @s[scores={pk.waystones.in_fight=1..}] run function pk_waystones:blocks/waystone/use/gui/triggers/cancel {reason:"You can't use waystones while you're fighting!"}
+execute if score $trigger.stop pk.temp matches 1 run return 0
+
 # Link all entities to tp
 execute at @s run function pk_waystones:blocks/waystone/use/gui/triggers/tp/group_prepare
 

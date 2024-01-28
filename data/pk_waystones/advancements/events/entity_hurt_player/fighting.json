@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+                        "type": "#pk_waystones:fighting"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:events/player/entity_hurt_player/fighting"
+    }
+}

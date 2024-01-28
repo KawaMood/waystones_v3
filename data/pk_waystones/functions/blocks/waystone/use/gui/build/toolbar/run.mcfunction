@@ -15,7 +15,7 @@ execute unless data storage pk:common temp.used_waystone.shared_with[{}] run fun
 execute if data storage pk:common temp.used_waystone.shared_with[{}] run function pk_waystones:blocks/waystone/use/gui/build/toolbar/buttons/shared_with/item
 
 # Set fillers
-function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_regular {slot:19,custom_model_data:16110069}
-function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_regular {slot:20,custom_model_data:16110069}
-function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_regular {slot:24,custom_model_data:16110069}
+function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_regular {slot:19,custom_model_data:11130069}
+function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_regular {slot:20,custom_model_data:11130069}
+function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_regular {slot:24,custom_model_data:11130069}
 function pk_waystones:blocks/waystone/use/gui/build/filler_item/set_waystones_list_dependant {slot:25}

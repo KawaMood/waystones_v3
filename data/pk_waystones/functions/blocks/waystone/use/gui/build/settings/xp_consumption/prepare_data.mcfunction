@@ -1,5 +1,5 @@
 #> pk_waystones:blocks/waystone/use/gui/build/settings/xp_consumption/prepare_data
-# @context any at the waystone container location (aligned xyz)
+# @context user at the waystone container location (aligned xyz)
 # The player who opened the waystone container is marked with "pk.current.player"
 # Storage:
 #   pk:common temp.used_waystone: the current used waystone data
