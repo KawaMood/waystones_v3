@@ -19,10 +19,10 @@ function pk_waystones:packages/get_player_name/run
 data modify storage pk:common temp.player.name set from storage pk:common temp.packages.get_player_name.name
 
 # Store player in database
-# - If not in data base yet, add it
+#   If not in data base yet, add it
 execute if score $in_database pk.temp matches 0 run data modify storage pk:waystones database.players append from storage pk:common temp.player
 execute if score $in_database pk.temp matches 0 run return 1
-# - If already in database, update name
+#   If already in database, update name
 data modify storage pk:common params set value {p1:"data modify storage pk:waystones database.players[{uuid:",p2:"}] set from storage pk:common temp.player"}
 data modify storage pk:common params.v1 set from storage pk:common temp.player.uuid
 function pk_waystones:packages/dynamic_command/1_var with storage pk:common params

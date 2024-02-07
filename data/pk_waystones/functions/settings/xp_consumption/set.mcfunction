@@ -2,8 +2,8 @@
 # @input
 #   $mode (string): The distance calculation mode. Can be either "manhattan" (following grid) or "euclidian" (straight-line)
 #   $blocks (int): distance in blocks per level consumption. 
-#       If set to 0 or less, disable the level consumption
-#       For example, if set to 1000 and the current distance that separates both waystones is between 2000 and 2999, it would requires 2 levels.
+#      If set to 0 or less, disable the level consumption
+#      For example, if set to 1000 and the current distance that separates both waystones is between 2000 and 2999, it would requires 2 levels.
 # Example: 
 #   function pk_waystones:settings/xp_consumption/set {blocks:100,mode:"euclidian"} 
 

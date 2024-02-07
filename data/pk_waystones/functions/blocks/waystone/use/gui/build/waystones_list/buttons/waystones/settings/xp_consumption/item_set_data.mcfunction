@@ -6,7 +6,7 @@
 #   pk:common temp.gui.item: the current button item in creation to append to the waystone list
 # Scores:
 #   $waystone_user.level pk.temp: current user's levels
-#       @within pk_waystones:blocks/waystone/use/gui/build/settings/xp_consumption/prepare_data
+#      @within pk_waystones:blocks/waystone/use/gui/build/settings/xp_consumption/prepare_data
 
 # If the waystone is free to use, cancel.
 scoreboard players set $ignore pk.temp 0
@@ -14,9 +14,9 @@ execute if data storage pk:common temp.visible_waystone.ignore.settings{xp_consu
 execute if score $ignore pk.temp matches 1 run return 0
 
 # Get distance between the used waystone and the visible waystone
-# - Prepare params
+#   Prepare params
 #   storage pk:common temp.used_waystone.pos is an int array containing coordinates of the used waystone
-#       @within pk_waystones:blocks/waystone/use/gui/build/settings/xp_consumption/prepare_data
+#      @within pk_waystones:blocks/waystone/use/gui/build/settings/xp_consumption/prepare_data
 data modify storage pk:common params.pos1 set from storage pk:common temp.used_waystone.pos
 data modify storage pk:common params.pos2 set value []
 data modify storage pk:common params.pos2 append from storage pk:common temp.visible_waystone.location.x
@@ -24,7 +24,7 @@ data modify storage pk:common params.pos2 append from storage pk:common temp.vis
 data modify storage pk:common params.pos2 append from storage pk:common temp.visible_waystone.location.z
 execute if score $pk.waystones.settings.xp_consumption.mode pk.value matches 0 run data modify storage pk:common params.mode set value "euclidian"
 execute if score $pk.waystones.settings.xp_consumption.mode pk.value matches 1 run data modify storage pk:common params.mode set value "manhattan"
-# - Get distance
+#   Get distance
 #   @writes $distance pk.temp
 function pk_waystones:packages/get_distance/run
 

@@ -1,8 +1,8 @@
 #> pk_waystones:blocks/waystone/use/gui/build/filler_item/set_waystones_list_dependant
 # @requires
 #   $gui.page.waystones.amount pk.temp: amount of waystones on the GUI current page
-#       Set during GUI build
-#           @within function pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/start
+#      Set during GUI build
+#          @within function pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/start
 # @input
 #   $slot (int): slot where the filler should be set
 

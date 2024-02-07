@@ -17,7 +17,7 @@ function pk_waystones:blocks/waystone/use/data/discovered_by/try_append_player
 
 # Create the list of waystones that the current user can see, in storage pk:common temp.visible_waystones
 function pk_waystones:blocks/waystone/use/data/visible_waystones/get
-# - Cache it into the data of the controller (to not recreate the list when the GUI is updated)
+#   Cache it into the data of the controller (to not recreate the list when the GUI is updated)
 execute as @e[type=marker,tag=pk.waystones.waystone.controller,dx=0,limit=1] run function pk_waystones:blocks/waystone/use/components/controller/set_visible_waystones_data
 
 # Build the GUI

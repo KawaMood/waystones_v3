@@ -15,13 +15,13 @@ scoreboard players add $z pk.temp 5
 
 # Prepare offset (on X or Z axis)
 scoreboard players set $random pk.temp 0
-# - If the player has at least a companion or a vehicle (2 blocks to avoid horse or larger entities to suffocate in waystone)
+#   If the player has at least a companion or a vehicle (2 blocks to avoid horse or larger entities to suffocate in waystone)
 execute if predicate pk_waystones:gameplay/has_vehicle_or_companion store result score $random pk.temp run random value -4..-1
 execute if score $random pk.temp matches -4 run scoreboard players add $x pk.temp 20
 execute if score $random pk.temp matches -3 run scoreboard players remove $x pk.temp 20
 execute if score $random pk.temp matches -2 run scoreboard players add $z pk.temp 20
 execute if score $random pk.temp matches -1 run scoreboard players remove $z pk.temp 20
-# - If the player is alone (1 block)
+#   If the player is alone (1 block)
 execute unless predicate pk_waystones:gameplay/has_vehicle_or_companion store result score $random pk.temp run random value 1..4
 execute if score $random pk.temp matches 1 run scoreboard players add $x pk.temp 10
 execute if score $random pk.temp matches 2 run scoreboard players remove $x pk.temp 10

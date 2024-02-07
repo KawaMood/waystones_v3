@@ -5,4 +5,4 @@
 execute store result entity @s data.waystone.version int 1 run scoreboard players get $pk.waystones.version pk.value
 
 # Switch
-# - (No update yet)
+#   (No update yet)

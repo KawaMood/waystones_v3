@@ -15,15 +15,15 @@ execute store result score $y2 pk.temp run data get storage pk:common params.pos
 execute store result score $z2 pk.temp run data get storage pk:common params.pos2[2] 10000
 
 # Calculate the absolute differences
-# - dx
+#   dx
 scoreboard players operation $dx pk.temp = $x1 pk.temp
 scoreboard players operation $dx pk.temp -= $x2 pk.temp
 execute if score $dx pk.temp matches ..-1 run scoreboard players operation $dx pk.temp *= $-1 pk.value
-# - dy
+#   dy
 scoreboard players operation $dy pk.temp = $y1 pk.temp
 scoreboard players operation $dy pk.temp -= $y2 pk.temp
 execute if score $dy pk.temp matches ..-1 run scoreboard players operation $dy pk.temp *= $-1 pk.value
-# - dz
+#   dz
 scoreboard players operation $dz pk.temp = $z1 pk.temp
 scoreboard players operation $dz pk.temp -= $z2 pk.temp
 execute if score $dz pk.temp matches ..-1 run scoreboard players operation $dz pk.temp *= $-1 pk.value

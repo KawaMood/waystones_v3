@@ -1,7 +1,7 @@
 #> pk_waystones:settings/default_protection/set
 # @input
 #   $attempted_value (string): protection
-#       Can be: "disabled", "enabled"
+#      Can be: "disabled", "enabled"
 # Example: 
 #   function pk_waystones:settings/default_protection/set {protection:"disabled"} 
 

@@ -1,7 +1,7 @@
 #> pk_waystones:settings/default_visibility/set
 # @input
 #   $attempted_value (string): visibility
-#       Can be: "discover", "private", "public"
+#      Can be: "discover", "private", "public"
 # Example: 
 #   function pk_waystones:settings/default_visibility/set {visibility:"discover"} 
 

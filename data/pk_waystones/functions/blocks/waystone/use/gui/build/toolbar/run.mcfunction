@@ -1,5 +1,5 @@
 #> pk_waystones:blocks/waystone/use/gui/build/toolbar/run
-# @context any at the waystone container location (aligned xyz)
+# @context user at the waystone container location (aligned xyz)
 
 # Set visibility button
 execute if data storage pk:common temp.used_waystone{visibility:"discover"} run function pk_waystones:blocks/waystone/use/gui/build/toolbar/buttons/visibility/discover

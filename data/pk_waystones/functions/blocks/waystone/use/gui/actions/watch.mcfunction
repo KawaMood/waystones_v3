@@ -8,13 +8,13 @@ scoreboard players set $gui.action.put pk.temp 0
 scoreboard players set $gui.action.put.accepted_item pk.temp 0
 
 # Check if any action occured
-# - Put (or swapped)
+#   Put (or swapped)
 data modify storage pk:common temp.gui.put_items set from block ~ ~ ~ Items
 data remove storage pk:common temp.gui.put_items[{tag:{pk_data:{gui:1b,from:"waystones"}}}]
 execute store result score $gui.action.put pk.temp run data get storage pk:common temp.gui.put_items
-# - Click (or swapped)
+#   Click (or swapped)
 execute store result score $gui.action.click pk.temp run clear @s #pk_waystones:all{pk_data:{gui:1b,from:"waystones"}}
-# - Drop
+#   Drop
 execute at @s anchored eyes positioned ^ ^ ^ store result score $gui.action.drop pk.temp run kill @e[type=item,distance=..2,nbt={Item:{tag:{pk_data:{gui:1b,from:"waystones"}}}}]
  
 # Stop the process if no action occured

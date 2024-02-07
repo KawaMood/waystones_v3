@@ -10,11 +10,11 @@
 #   dimension (string): dimension id
 # discovered_by (array): list of players having interacted with this Waystone
 #   (entry)
-#       uuid (4 int array): UUID of a player
+#      uuid (4 int array): UUID of a player
 # shared_with (list of entries): list of players that can use this Waystone if the visibility is on "private"
 #   (entry)
-#       uuid (4 int array): UUID of a player
-#       name (string): If the player isn't in the database yet, store its name instead
+#      uuid (4 int array): UUID of a player
+#      name (string): If the player isn't in the database yet, store its name instead
 # protected (boolean): Can be broken by any event if true, or removed only by the owner or a manager if false, false by default
 # visibility (string): "public", "private" or "discover"
 # render_item (entry):

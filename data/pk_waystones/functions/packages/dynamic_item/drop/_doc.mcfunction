@@ -1,6 +1,6 @@
 # Data should be set in storage pk:common temp.packages.dynamic_item
-# - EntityData: Data to set to the item entity
-# - apply_random_motion: Should be 1b if you want to apply a random motion to the item entity (like when you mine a block)
+#   entity_data: Data to set to the item entity
+#   apply_random_motion: Should be 1b if you want to apply a random motion to the item entity (like when you mine a block)
 
 # Example:
 data modify storage pk:common temp.packages.dynamic_item set value {apply_random_motion:1b,entity_data:{Tags:["ns.foo"]}}

@@ -5,8 +5,8 @@
 # Storage:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 # Define storage
-# - pk:common | Used to store installed PK Datapacks names and version and for temp data manipulation
-# - pk:waystones database.waystones | Database of Waystones
+#   pk:common | Used to store installed PK Datapacks names and version and for temp data manipulation
+#   pk:waystones database | Database of Waystones
 #declare storage pk:common
 #declare storage pk:waystones
 
@@ -25,8 +25,8 @@ execute unless data storage pk:waystones database.blacklist.dimensions[{}] run f
 # Scores:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 # Define objectives that are common to each PK data pack:
-# - pk.temp only concerns temp values that can be cleared at any time without risks.
-# - pk.value is used for fixed values and variable settings, and won't be cleared on uninstallation until there is no PK data pack anymore.
+#   pk.temp only concerns temp values that can be cleared at any time without risks.
+#   pk.value is used for fixed values and variable settings, and won't be cleared on uninstallation until there is no PK data pack anymore.
 scoreboard objectives add pk.temp dummy
 scoreboard objectives add pk.value dummy
 scoreboard objectives add pk.custom_block.component.id dummy
@@ -34,18 +34,18 @@ scoreboard objectives add pk.custom_block.interaction.id dummy
 scoreboard objectives add pk.crafted.knowledge_book crafted:knowledge_book
 
 # Define objective that are specific to the current data pack
-# - Tracking players actions:
+#   Tracking players actions:
 scoreboard objectives add pk.waystones.mined.barrel mined:barrel
 scoreboard objectives add pk.waystones.leave_game custom:leave_game
 scoreboard objectives add pk.waystones.in_fight dummy
-# - Used for Waystones functioning:
+#   Used for Waystones functioning:
 scoreboard objectives add pk.waystones.page dummy
 scoreboard objectives add pk.waystones.animations.timer dummy
-# - Used to link players with their vehicle or pets
+#   Used to link players with their vehicle or pets
 scoreboard objectives add pk.waystones.group.id dummy
-# - Used to allow a player to change its ability to see coordinates from the Waystones GUI (safety for video makers):
+#   Used to allow a player to change its ability to see coordinates from the Waystones GUI (safety for video makers):
 scoreboard objectives add pk.waystones.hide_coordinates trigger
-# - Used to store gametime to some entities to know when they were loaded last time
+#   Used to store gametime to some entities to know when they were loaded last time
 scoreboard objectives add pk.waystones.gametime dummy
 
 # Consts
@@ -61,7 +61,7 @@ function pk_waystones:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 2.. run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 3.. run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:

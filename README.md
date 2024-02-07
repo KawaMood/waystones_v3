@@ -1,4 +1,4 @@
-# **Waystones V.3.1.0**
+# **Waystones V.3.1.1**
 
 **Avoid unnecessary long journeys!**
 

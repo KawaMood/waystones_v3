@@ -3,7 +3,7 @@
 # @context the user (tag=pk.current.player) at the used waystone's controller
 # Storage:
 #   pk:common temp.gui.accepted_item: accepted item from the put items list
-#       @within pk_waystones:blocks/waystone/use/gui/actions/put/accepted/shared_with
+#      @within pk_waystones:blocks/waystone/use/gui/actions/put/accepted/shared_with
 
 # Cancel if the player is allowed to change shared_with
 scoreboard players set $trigger.stop pk.temp 0
