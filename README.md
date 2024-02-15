@@ -218,6 +218,17 @@ Additionnally, you can also limit the amount of waystone your **server** can con
 You can also combine both settings if you want to set a limit per player but also a global limit on the server.
 </details>
 <details>
+<summary>Hide coordinates in the waystones GUI</summary>
+
+If enabled, no player will be able to see waystones location from the GUI, unless they have the manager role. You can **enable**, **disable** or **get** the current state of the setting using these following commands respectively:
+```
+/function pk_waystones:settings/hide_coordinates/true
+/function pk_waystones:settings/hide_coordinates/false
+/function pk_waystones:settings/hide_coordinates/get
+```
+Note that another command is usable by non-op players and allow them to hide coordinates of waystones for their own character only. _Refer to the "Other commands" section bellow._
+</details>
+<details>
 <summary>Permission: Change "Visibility" Attribute</summary>
 
 These permissions allows you to restrict players from using specific visibility values. Note that managers are immune to this effect and will always be able to change any attributes from any waystone. By default, players are allowed to set any visibility to their waystone.
@@ -312,7 +323,7 @@ If you are an operator of your server or if cheats are enabled in your single-pl
 /function pk_waystones:items/waystone/give/nether
 ```
 
-## Hide locations from the waystones list
+## (For non-op players) Hide locations from the waystones list
 
 This command can be used even by players who aren't operators on the server. It allows you to hide coordinates of waystones from waystones' GUI. It can be useful if you're a video maker who plays on a PvP server, and don't want to leak your waystones' location.  
 Of course, this setting is player-specific. Meaning by changing it, it will only apply for yourself (not for other players).  
@@ -320,6 +331,24 @@ Using these following commands, if the value is set on **1**, waystones' locatio
 ```
 /trigger pk.waystones.hide_coordinates set 1
 /trigger pk.waystones.hide_coordinates set 0
+```
+
+## Troubleshooting
+
+### Recreate all waystones from the database
+
+If ever waystones have been broken accidentally (using a `kill @e` command for example) you can run the following command to recreate all waystones from the database
+```
+/function pk_waystones:base/debug/recreate_all_waystones/start
+```
+The process will automatically remove all remaining entities and blocks of broken waystones before placing fresh ones. All data (id, owner, type, attributes...) will be preserved.
+It may take some time for it to complete, so be sure to get the message telling the process ended successfully before interacting with or placing a waystone.
+
+### Force waystones to unlock
+
+On server that use external tools like Paper, Spigot... some desynch can happen, and block may not update their blockstates correctly. If ever you get the message "This waystone is currently used by someone else" when no-body is actually using it, you can force the waystones to unlock using the follow troubleshooting command:
+```
+/function pk_waystones:base/debug/force_waystones_to_unlock
 ```
 
 # 💄 Optional Resources Pack
