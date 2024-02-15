@@ -2,6 +2,9 @@
 # @context user at the waystone container location (aligned xyz)
 # Storage:
 #   pk:common temp.visible_waystone: the current visible waystone of the loop
+# Score:
+#   $hide_coordinates pk.temp: 0 if it can see coordinates, 1 if it can't
+#       @within function pk_waystones:blocks/waystone/use/gui/build/run
 
 # Set id, tag, Count and Slot
 data modify storage pk:common temp.gui.item set value {Count:1b,HideFlags:255}
@@ -21,7 +24,7 @@ data modify storage pk:common temp.gui.item.tag.display.Name set from block ~ ~-
 # Set location in lore
 data modify storage pk:common temp.gui.item.tag.display.Lore set value []
 data modify block ~ ~-1 ~ front_text.messages[0] set value '[{"text":"At [","color":"gray","italic":false},{"nbt":"temp.visible_waystone.location.x","storage":"pk:common"},{"text":", "},{"nbt":"temp.visible_waystone.location.y","storage":"pk:common"},{"text":", "},{"nbt":"temp.visible_waystone.location.z","storage":"pk:common"},{"text":"] in "},{"nbt":"temp.visible_waystone.location.dimension","storage":"pk:common"}]'
-execute unless entity @a[tag=pk.current.player,scores={pk.waystones.hide_coordinates=1},distance=..20,limit=1] run data modify storage pk:common temp.gui.item.tag.display.Lore append from block ~ ~-1 ~ front_text.messages[0]
+execute if score $hide_coordinates pk.temp matches 0 run data modify storage pk:common temp.gui.item.tag.display.Lore append from block ~ ~-1 ~ front_text.messages[0]
 
 # Set visibility in lore
 execute if data storage pk:common temp.visible_waystone{visibility:"private"} run data modify storage pk:common temp.gui.item.tag.display.Lore append value '{"text":"Private Waystone","color":"red","italic":false}' 

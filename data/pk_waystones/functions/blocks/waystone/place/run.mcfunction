@@ -6,6 +6,7 @@
 
 # Scores
 scoreboard players add $next pk.custom_block.component.id 1
+scoreboard players operation $temp pk.custom_block.component.id = $next pk.custom_block.component.id
 
 # Prepare data and store them to database
 function pk_waystones:blocks/waystone/place/data/store

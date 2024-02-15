@@ -14,6 +14,10 @@ data modify storage pk:common params set value {p1:"execute store success score 
 data modify storage pk:common params.v1 set from entity @s UUID
 function pk_waystones:packages/dynamic_command/1_var with storage pk:common params
 
+# Check if user can see the waystones coordinates
+scoreboard players set $hide_coordinates pk.temp 0
+execute if entity @a[tag=pk.current.player,predicate=pk_waystones:gameplay/hide_coordinates,distance=..20,limit=1] run scoreboard players set $hide_coordinates pk.temp 1
+
 # Store the list of visible waystones from the controller
 data modify storage pk:common temp.visible_waystones set from entity @e[type=marker,tag=pk.waystones.waystone.controller,dx=0,limit=1] data.waystone.gui.visible_waystones
 
@@ -28,6 +32,3 @@ function pk_waystones:blocks/waystone/use/gui/build/toolbar/run
 # Update container and controller cached GUI items
 data modify block ~ ~ ~ Items set from storage pk:common temp.gui.items
 data modify entity @e[type=marker,tag=pk.waystones.waystone.controller,dx=0,limit=1] data.waystone.gui.prev_tick_items set from block ~ ~ ~ Items
-
-#TO_REMOVE
-data modify storage pk:common backup.gui set from block ~ ~ ~ Items

@@ -1,7 +1,7 @@
 #> pk_waystones:blocks/waystone/place/components/controller_prepare
 
 # Prepare scores
-scoreboard players operation @s pk.custom_block.component.id = $next pk.custom_block.component.id
+scoreboard players operation @s pk.custom_block.component.id = $temp pk.custom_block.component.id
 
 # Initialize animations delay score
 scoreboard players set @s pk.waystones.waystone.animations.delay 0

@@ -3,7 +3,7 @@
 # Data with default values: visibility, discovered_by, shared_with, protected, render_item
 data modify storage pk:common temp.waystone set value {visibility:"discover",discovered_by:[],shared_with:[],protected:0b,render_item:{id:"minecraft:grass_block"}} 
 # Id
-execute store result storage pk:common temp.waystone.id int 1 run scoreboard players get $next pk.custom_block.component.id
+execute store result storage pk:common temp.waystone.id int 1 run scoreboard players get $temp pk.custom_block.component.id
 # Variant
 data modify storage pk:common temp.waystone.variant set from storage pk:common temp.item.tag.SkullOwner.Properties.textures[0].Signature
 # Name

@@ -20,7 +20,8 @@
 #   $pk.waystones.settings.show_same_dimension_only pk.value | default: (undefined) | >=1 show only Waystones of same the dimension in a Waystone's menu
 #   $pk.waystones.settings.default_visibility       pk.value | default: (undefined) | (undefined) or 0 : discover | 1 : private | 2 : public
 #   $pk.waystones.settings.xp_consumption.blocks    pk.value | default: (undefined) | (undefined) or <=0 = disable | >=1 = blocks distance for consumption of a level
-#   $pk.waystones.settings.xp_consumption.mode      pk.value: distance calculation method between two waystones | 0: "euclidian" | 1: "manhattan"
+#   $pk.waystones.settings.xp_consumption.mode      pk.value | default: (undefined) | distance calculation method between two waystones | 0: "euclidian" | 1: "manhattan"
+#   $pk.waystones.settings.hide_coordinates         pk.value | default: (undefined) | (undefined) or 0 : show | 1 : hide coordinates for all players
 #   Permissions
 #   $pk.waystones.permissions.change.visibility.discover pk.value | default: (undefined) | 0 = disable | (undefined) or 1 allow visibility change to "discover"
 #   $pk.waystones.permissions.change.visibility.private  pk.value | default: (undefined) | 0 = disable | (undefined) or 1 allow visibility change to "private"

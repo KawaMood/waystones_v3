@@ -1,4 +1,4 @@
-# **Waystones V.3.1.1**
+# **Waystones V.3.1.2**
 
 **Avoid unnecessary long journeys!**
 
@@ -38,7 +38,7 @@ Waystones icons in the list depends on the block they have been placed on, so yo
 
 Right-clicking the top part of a waystone will open it. The GUI shows you the list of other waystones that are visible to you on the two first lines, and a toolbar to edit the waystones attributes or navigate within pages in the bottom line.
 
-By left-clicking on a waystone from the list, you will be teleported to it. Note that you will also take with you your vehicle (horse, boat...) and the mobs you currently have on leash. So wasytones also allow you to transport mobs within several locations more fastly.
+By left-clicking on a waystone from the list, you will be teleported to it. Note that you will also take with you your vehicle (horse, boat...) and the mobs you currently have on leash. So waystones also allow you to transport mobs within several locations more fastly.
 
 I recommend you to watch the featured video for better explanations and examples.
 
