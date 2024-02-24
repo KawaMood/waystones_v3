@@ -47,13 +47,13 @@ Other buttons may appear on the bottom-left and bottom-right corners if you have
 
 ![waystone gui](https://cdn.modrinth.com/data/cached_images/72f81dd3a15b06e2730298b66dce4004636aeb06.jpeg)
 
-You can discover bellow the influence of each attributes.  
+You can discover below the influence of each attributes.  
 
 ## Visibility
 
 The first button concerns the waystone's visibility. There are three available values:
 - If set on **discoverable**, other players won't see it until they interact with it at least once, meaning they need to discover the waystone's location first.  
-- If set on **private**, other player won't be able to see this waystone from the list. Only you (the owner), waystones managers, and players you share this waystones with (see "Shared With" bellow) will be able to see it. 
+- If set on **private**, other player won't be able to see this waystone from the list. Only you (the owner), waystones managers, and players you share this waystones with (see "Shared With" below) will be able to see it. 
 If set on **public**, every players will be able to see it from the list.  
 
 ## Protection
@@ -134,7 +134,7 @@ Example - Disallow waystones placement in the Nether
 ```
 /function pk_waystones:settings/blacklist_dimensions/add {dimension:"minecraft:the_nether"}
 ```
-📜 Note: in order to see the dimension id you're currently in, you can open the [debug screen (F3)](https://minecraft.wiki/w/Debug_screen), the dimension id is shown bellow the coordinates on the left side.
+📜 Note: in order to see the dimension id you're currently in, you can open the [debug screen (F3)](https://minecraft.wiki/w/Debug_screen), the dimension id is shown below the coordinates on the left side.
 </details>
 <details>
 <summary>Display Waystones Nameplates</summary>
@@ -226,7 +226,7 @@ If enabled, no player will be able to see waystones location from the GUI, unles
 /function pk_waystones:settings/hide_coordinates/false
 /function pk_waystones:settings/hide_coordinates/get
 ```
-Note that another command is usable by non-op players and allow them to hide coordinates of waystones for their own character only. _Refer to the "Other commands" section bellow._
+Note that another command is usable by non-op players and allow them to hide coordinates of waystones for their own character only. _Refer to the "Other commands" section below._
 </details>
 <details>
 <summary>Permission: Change "Visibility" Attribute</summary>
