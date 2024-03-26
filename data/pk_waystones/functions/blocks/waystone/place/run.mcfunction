@@ -1,6 +1,6 @@
 #> pk_waystones:blocks/waystone/place/run
 # Place a Waystone and store its relative information in the database
-# @context the player who placed the waystone head, at the block location
+# @context any at the block location
 # Features like skins and visible names are placed further in the current tick
 #   @within function pk_waystones:blocks/waystone/main/on_entity_load/run
 
@@ -9,7 +9,8 @@ scoreboard players add $next pk.custom_block.component.id 1
 scoreboard players operation $temp pk.custom_block.component.id = $next pk.custom_block.component.id
 
 # Prepare data and store them to database
-function pk_waystones:blocks/waystone/place/data/store
+execute if score $pk.custom_block.placed_by_player pk.temp matches 1 run function pk_waystones:blocks/waystone/place/data/store_from_player_placement
+execute if score $pk.custom_block.placed_by_command pk.temp matches 1 run function pk_waystones:blocks/waystone/place/data/store_from_command_placement/run
 
 # Create controller
 execute positioned ~0.5 ~1.5 ~0.5 summon marker run function pk_waystones:blocks/waystone/place/components/controller_prepare

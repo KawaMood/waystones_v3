@@ -14,5 +14,5 @@ execute if score $pk.waystones.uninstall.chunk.already_forceload pk.value matche
 # Continue process with next waystone to remove, or stop it if there are no waystones anymore
 data remove storage pk:waystones uninstall.waystones[-1]
 scoreboard players remove $pk.waystones.uninstall.waystones.length pk.value 1
-execute unless score $pk.waystones.uninstall.waystones.length pk.value matches 0 run function pk_waystones:base/uninstall/1
 execute if score $pk.waystones.uninstall.waystones.length pk.value matches 0 as @a[tag=pk.waystones.uninstaller] run function pk_waystones:base/uninstall/stop
+execute unless score $pk.waystones.uninstall.waystones.length pk.value matches 0 run function pk_waystones:base/uninstall/1

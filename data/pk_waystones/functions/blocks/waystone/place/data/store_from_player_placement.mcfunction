@@ -1,4 +1,4 @@
-#> pk_waystones:blocks/waystone/place/data/store
+#> pk_waystones:blocks/waystone/place/data/store_from_player_placement
 
 # Data with default values: visibility, discovered_by, shared_with, protected, render_item
 data modify storage pk:common temp.waystone set value {visibility:"discover",discovered_by:[],shared_with:[],protected:0b,render_item:{id:"minecraft:grass_block"}} 

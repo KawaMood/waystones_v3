@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:recipe_crafted",
+            "conditions": {
+                "recipe_id": "pk_waystones:waystone/mossy_stone"
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:events/player/crafted/waystone/variant/mossy_stone"
+    }
+}

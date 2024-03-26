@@ -1,4 +1,4 @@
-#> pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/settings/xp_consumption/item_set_data
+#> pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/item/xp_consumption/try
 # @context user at the waystone container location (aligned xyz)
 # Storage:
 #   pk:common temp.visible_waystone: the current visible waystone of the loop
@@ -10,7 +10,7 @@
 
 # If the waystone is free to use, cancel.
 scoreboard players set $ignore pk.temp 0
-execute if data storage pk:common temp.visible_waystone.ignore.settings{xp_consumption:1b} run function pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/settings/xp_consumption/item_ignore
+execute if data storage pk:common temp.visible_waystone.ignore.settings{xp_consumption:1b} run function pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/item/xp_consumption/ignore
 execute if score $ignore pk.temp matches 1 run return 0
 
 # Get distance between the used waystone and the visible waystone

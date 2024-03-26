@@ -2,6 +2,7 @@
 # @context as the current controller at @s
 
 # Prepare score
+scoreboard players operation $temp pk.custom_block.interaction.id = @s pk.custom_block.interaction.id
 scoreboard players operation $temp pk.custom_block.component.id = @s pk.custom_block.component.id
 scoreboard players set $use.stop pk.temp 1
 
@@ -13,6 +14,9 @@ execute align xyz run kill @e[type=interaction,tag=pk.custom_block.lock.in_use,d
 
 # Refresh container
 function pk_waystones:blocks/waystone/place/available_container
+
+# Remove potential kept gui items from the player inventory (using a stress glitch)
+clear @a[predicate=pk_waystones:scores/custom_block/interaction_id/match_temp,limit=1] #pk_waystones:all{pk_data:{gui:1b,from:"waystones"}}
 
 # Animations
 stopsound @a[distance=..30] block block.barrel.close

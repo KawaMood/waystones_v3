@@ -14,5 +14,5 @@ execute if score $pk.waystones.debug.recreate.chunk.already_forceload pk.value m
 # Continue process with next waystone to recreate, or stop it if there are no waystones anymore
 data remove storage pk:waystones debug.recreate.waystones[-1]
 scoreboard players remove $pk.waystones.debug.recreate.waystones.length pk.value 1
-execute unless score $pk.waystones.debug.recreate.waystones.length pk.value matches 0 run function pk_waystones:base/debug/recreate_all_waystones/1
 execute if score $pk.waystones.debug.recreate.waystones.length pk.value matches 0 as @a[tag=pk.waystones.recreate] run function pk_waystones:base/debug/recreate_all_waystones/stop
+execute unless score $pk.waystones.debug.recreate.waystones.length pk.value matches 0 run function pk_waystones:base/debug/recreate_all_waystones/1

@@ -1,0 +1,4 @@
+#> pk_waystones:items/waystone/attributes/mossy_stone
+# Returns data of item used to create a dynamic item into storage pk:common temp.attributes
+
+data modify storage pk:common temp.attributes set value {id:"player_head",tag:{display:{Name:'{"text":"Waystone","italic": false,"color": "yellow"}',Lore:['{"text":"Waystone","italic": false,"color": "gray"}']},HideFlags:1,pk_data:{custom_block:1b,id:"waystone",from:"waystones",variant:"mossy_stone"},SkullOwner:{Name:"%pk.custom_block.waystone",Id:[I;16,11,3,2],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHBzOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IxNDRlMjQwMjA3MDE5MDljNGM1N2FjMmJmMjIxZDk4NGM3OWMyZDFiMmE3YWQxZGYzYWNkZDIxN2U3YmQ0NGEifX19",Signature:"mossy_stone"}]}},CustomModelData:11130036}}

@@ -16,6 +16,4 @@ function pk_waystones:packages/dynamic_command/1_var with storage pk:common para
 execute if score $success pk.temp matches 0 run return 0
 
 # Update database
-data modify storage pk:common params set value {p1:"data modify storage pk:waystones database.waystones[{id:",p2:"}].discovered_by set from storage pk:common temp.used_waystone.discovered_by"}
-data modify storage pk:common params.v1 set from storage pk:common temp.used_waystone.id
-function pk_waystones:packages/dynamic_command/1_var with storage pk:common params
+function pk_waystones:blocks/waystone/use/data/used_waystone/update

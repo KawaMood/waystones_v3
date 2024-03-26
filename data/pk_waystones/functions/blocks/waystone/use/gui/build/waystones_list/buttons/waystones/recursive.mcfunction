@@ -5,7 +5,7 @@
 
 # Create item and append it to pk:common temp.gui.waystones_list
 $data modify storage pk:common temp.visible_waystone set from storage pk:common temp.visible_waystones[$(i)]
-function pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/item
+function pk_waystones:blocks/waystone/use/gui/build/waystones_list/buttons/waystones/item/set
 
 # Recursive call
 scoreboard players add $i pk.temp 1

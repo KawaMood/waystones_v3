@@ -12,6 +12,9 @@ execute align xyz positioned ~0.4995 ~-0.0005 ~0.4995 summon interaction run fun
 # Store the currently used waystone data and prepare the page score
 function pk_waystones:blocks/waystone/use/data/used_waystone/get
 
+# Assign the user as owner if the used waystone is unclaimed
+execute unless data storage pk:common temp.used_waystone.owner run function pk_waystones:blocks/waystone/use/data/assign_owner_if_unclaimed
+
 # Try to update the waystone's discovered_by list in database
 function pk_waystones:blocks/waystone/use/data/discovered_by/try_append_player
 
