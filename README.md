@@ -382,10 +382,11 @@ The data pack also provides some handy commands. Some of them are usable by both
   
 If you are an operator of your server or if cheats are enabled in your single-player world, you can give yourself a waystone of any variant using these following commands:
 ```
-/function pk_waystones:items/waystone/give/regular
-/function pk_waystones:items/waystone/give/sand
-/function pk_waystones:items/waystone/give/deepslate
-/function pk_waystones:items/waystone/give/nether
+/function pk_waystones:commands/give/waystone/regular
+/function pk_waystones:commands/give/waystone/sand
+/function pk_waystones:commands/give/waystone/deepslate
+/function pk_waystones:commands/give/waystone/nether
+/function pk_waystones:commands/give/waystone/mossy_stone
 ```
 </details>
 <details>
@@ -469,7 +470,7 @@ Using these following commands, if the value is set on **1**, waystones' locatio
 If ever waystones have been broken accidentally (using a `kill @e` command for example) you can run the following command to recreate all waystones from the database
 
 ```
-/function pk_waystones:base/debug/recreate_all_waystones/start
+/function pk_waystones:commands/debug/recreate_all_waystones
 ```
 
 The process will automatically remove all remaining entities and blocks of broken waystones before placing fresh ones. All data (id, owner, type, attributes...) will be preserved.
@@ -480,7 +481,7 @@ It may take some time for it to complete, so be sure to get the message telling 
 On server that use external tools like Paper, Spigot... some desynch can happen, and block may not update their blockstates correctly. If ever you get the message "This waystone is currently used by someone else" when no-body is actually using it, you can force the waystones to unlock using the follow troubleshooting command:
 
 ```
-/function pk_waystones:base/debug/force_waystones_to_unlock
+/function pk_waystones:commands/debug/force_waystones_to_unlock
 ```
 
 # 💄 Optional Resources Pack
